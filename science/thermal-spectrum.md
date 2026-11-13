@@ -142,7 +142,7 @@ bx>\ln(x+1).
 \tag{11}
 ```
 
-The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign of $`x/(x+1)-\ln(x+1)<0`$. The largest allowed value $`x=N`$ has nonzero rest multiplicity. Therefore
+The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign of $`x/(x+1)-\ln(x+1)\lt 0`$. The largest allowed value $`x=N`$ has nonzero rest multiplicity. Therefore
 
 ```math
 \boxed{
@@ -150,7 +150,7 @@ The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign o
 \quad\Longleftrightarrow\quad
 b>\frac{\ln(N+1)}{N}
 \quad\Longleftrightarrow\quad
-T<\frac{g}{k_{\mathrm B}\ln(N+1)}.
+T\lt \frac{g}{k_{\mathrm B}\ln(N+1)}.
 }
 \tag{12}
 ```

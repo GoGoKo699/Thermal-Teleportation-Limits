@@ -46,7 +46,7 @@ In each normalized spin block, the decoder's excess is $`2\nu_j/[3(x-1)]`$. Comp
 
 ## An explicit uniform finite bound
 
-Write $`L=\ln(1/b)`$. For every even finite $`N`$ and $`0<b\le1/4`$,
+Write $`L=\ln(1/b)`$. For every even finite $`N`$ and $`0\lt b\le1/4`$,
 
 ```math
 \boxed{
@@ -152,7 +152,7 @@ The exact source limit obeys
 
 The exponent comes from the first spin sectors that can be NPT. They occur at $`x`$ of order $`\ln(1/b)/b`$, far above the thermally typical order $`b^{-1/2}`$. Their Boltzmann cost is therefore of order $`\exp[-\ln^2(1/b)/(4b)]`$ on the logarithmic scale specified in (14).
 
-**Upper bound.** Fix $`0<\varepsilon<1`$ and let $`L=\ln(1/b)`$. Equation (7) restricts every positive term to $`x>L/b`$. For all sufficiently small $`b`$, uniformly on this tail,
+**Upper bound.** Fix $`0\lt \varepsilon\lt 1`$ and let $`L=\ln(1/b)`$. Equation (7) restricts every positive term to $`x>L/b`$. For all sufficiently small $`b`$, uniformly on this tail,
 
 ```math
 x(x-2)\ge(1-\varepsilon)x^2.
@@ -230,7 +230,7 @@ Define the two ordered envelopes
 The finite operational sandwich implies
 
 ```math
-0<d(b)\le\Delta_-(b)\le\Delta_+(b)\le\frac23\nu_\infty(b).
+0\lt d(b)\le\Delta_-(b)\le\Delta_+(b)\le\frac23\nu_\infty(b).
 \tag{21}
 ```
 

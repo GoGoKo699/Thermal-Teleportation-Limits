@@ -16,6 +16,14 @@ This repository studies one-copy physical-qubit teleportation using a supplied c
 - Primary versions and actual comparison scope: references/source-evidence.md
 - Finite reproduction commands, expected checks and limitations: verification/README.md
 
+## Learning route
+
+- Selected educational source, notation translation, a complete two-spin example and the bridge to the proofs: learning/anchor-and-bridge.md
+- Thirty shared understanding targets, dependencies and source pointers: learning/milestones.md
+- Entry and reading order for that route: learning/README.md
+
+The sole educational anchor is John Watrous, The Theory of Quantum Information (2018). The spin-sector Gibbs analysis and project-specific theorems are supplied by this repository; the book supports the channel, entanglement and symmetry foundations. Distinguish Watrous's unsquared state fidelity from the pure-state overlap averaged in this teleportation score.
+
 ## Essential distinctions
 
 The full Gibbs state is not projected onto spin zero. The Hamiltonian contains the factor 1/N. Every failed filter contributes to the teleportation score. Entanglement onset and a fixed fidelity excess have different temperature scales. Rare-sector operational matching permits a receiver laboratory containing all other source spins, including the fixed output spin. The optimal fidelity need not have an established fixed-b limit: its large-N lower and upper envelopes have the stated outer logarithmic rate. A fixed disjoint helper-pair partition is not an arbitrary two-qubit gate budget. The positive singlet Bell decoder, source model and invariant-spin spectrum are inherited ingredients.

@@ -46,7 +46,7 @@ F(\mathcal T)=\int d\psi\,
 \langle\psi|\mathcal T(|\psi\rangle\langle\psi|)|\psi\rangle.
 ```
 
-Every measurement outcome, unsuccessful filter, and fallback branch contributes to this average. Heralding cannot remove a failed attempt from the denominator. Parties may always ignore the source and use optimal classical measure-and-prepare transmission, so the attainable baseline is $`F_{\mathrm{cl}}=2/3`$. A **fixed quantum advantage** means $`F\ge 2/3+\delta`$ for a prescribed $`0<\delta<1/3`$ independent of $`N`$. This is stronger than asking for a positive excess that may vanish with system size.
+Every measurement outcome, unsuccessful filter, and fallback branch contributes to this average. Heralding cannot remove a failed attempt from the denominator. Parties may always ignore the source and use optimal classical measure-and-prepare transmission, so the attainable baseline is $`F_{\mathrm{cl}}=2/3`$. A **fixed quantum advantage** means $`F\ge 2/3+\delta`$ for a prescribed $`0\lt \delta\lt 1/3`$ independent of $`N`$. This is stronger than asking for a positive excess that may vanish with system size.
 
 The late independent input rules out using prior knowledge of the state to be transmitted as an uncharged reference or source-preparation resource. Helpers may act before or after that input arrives; the converse includes input-dependent adaptation.
 

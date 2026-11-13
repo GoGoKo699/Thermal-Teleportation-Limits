@@ -49,7 +49,7 @@ It can be positive only when
 bx>\ln(x+1)\ge\ln3.
 ```
 
-Consequently every contributing block has $`1/x<b/\ln3`$. Averaging the normalized, orthogonal receiver blocks proves
+Consequently every contributing block has $`1/x\lt b/\ln3`$. Averaging the normalized, orthogonal receiver blocks proves
 
 ```math
 \nu_N(b)\le
@@ -165,7 +165,7 @@ Let $`D_N=d_N(0)`$. The exact multiplicity ratio obeys
 \tag{6}
 ```
 
-For $`b\ge2`$, use $`q=e^{-4}<1/50`$ and
+For $`b\ge2`$, use $`q=e^{-4}\lt 1/50`$ and
 
 ```math
 e^{-bJ(J+1)}\le q^J
@@ -211,7 +211,7 @@ b_\delta=\frac12\ln\frac1{q_\delta}.
 \tag{8}
 ```
 
-For $`b\ge b_\delta`$, put $`q=e^{-2b}\le q_\delta<1/2`$. Equation (6) gives an excited-sector weight relative to the singlet sector of at most
+For $`b\ge b_\delta`$, put $`q=e^{-2b}\le q_\delta\lt 1/2`$. Equation (6) gives an excited-sector weight relative to the singlet sector of at most
 
 ```math
 S_2(q)\le72q
@@ -278,7 +278,7 @@ b>\frac{\ln(N+1)}N.
 For the stated Kac normalization this is
 
 ```math
-T<\frac{g}{k_{\mathrm B}\ln(N+1)}.
+T\lt \frac{g}{k_{\mathrm B}\ln(N+1)}.
 \tag{11}
 ```
 

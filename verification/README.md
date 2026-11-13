@@ -1,5 +1,11 @@
 # Reproduce the finite calculations
 
+## Hosted mathematics
+
+The [hosted mathematics workflow](../.github/workflows/hosted-math.yml) compares the exact proposed Markdown with the actual GitHub renderer at widths 1440 and 760 pixels. It uses a temporary browser runtime with read-only repository permissions and retains screenshots and structural reports for inspection. A passing structural comparison supplements visual and scientific review; it does not establish a theorem or guarantee future rendering behavior.
+
+## Scientific calculations
+
 From the repository root, install the numerical dependencies and run:
 
 ```bash
