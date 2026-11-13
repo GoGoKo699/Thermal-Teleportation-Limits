@@ -1,0 +1,21 @@
+# Thermal Teleportation Limits
+
+This repository studies one-copy physical-qubit teleportation using a supplied collective Heisenberg Gibbs state. Read the scientific model before transferring a result between access models or parameter limits.
+
+## Central routes
+
+- Task, input, output, allowed laboratories and charged boundaries: science/model.md
+- Exact finite Gibbs spectrum and one-spin partial transpose: science/thermal-spectrum.md
+- Complete-protocol fidelity upper bound and explicit all-outcome spin-block decoder: science/teleportation-bounds.md
+- Fixed-score cooling order and inherited paired-helper Bell decoder: science/cooling-and-decoding.md
+- Uniform finite suppression, ordered optimal-excess logarithmic rate and sufficient joint regime: science/rare-sectors.md
+- Singleton helper optimum, symmetry-wide ceiling and fixed disjoint-pair converse: science/helper-access.md
+- Physical interpretation and finite worked comparison: science/interpretation.md
+- Proof-dependency and reading map: science/README.md
+- Attribution and model-level prior comparisons: references/related-work.md
+- Primary versions and actual comparison scope: references/source-evidence.md
+- Finite reproduction commands, expected checks and limitations: verification/README.md
+
+## Essential distinctions
+
+The full Gibbs state is not projected onto spin zero. The Hamiltonian contains the factor 1/N. Every failed filter contributes to the teleportation score. Entanglement onset and a fixed fidelity excess have different temperature scales. Rare-sector operational matching permits a receiver laboratory containing all other source spins, including the fixed output spin. The optimal fidelity need not have an established fixed-b limit: its large-N lower and upper envelopes have the stated outer logarithmic rate. A fixed disjoint helper-pair partition is not an arbitrary two-qubit gate budget. The positive singlet Bell decoder, source model and invariant-spin spectrum are inherited ingredients.
