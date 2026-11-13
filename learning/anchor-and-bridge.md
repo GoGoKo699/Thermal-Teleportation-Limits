@@ -27,9 +27,9 @@ A few conventions must be translated before using textbook formulas.
 | Adjoint $`X^*`$ | Written $`X^\dagger`$ in the scientific account; it is the same operation. |
 | A channel $`\Phi`$ | The complete input-to-output channel is often written $`\mathcal T:Q\to B`$. |
 | Choi operator $`J(\Phi)`$ in §2.2 | Denote it here by $`J_{\mathrm W}(\Phi)`$ to distinguish it from collective spin $`\mathbf J`$. The book's channel Choi operator has trace equal to the input dimension. |
-| The normalized channel Choi state | $`\tau_{RB}=(I_R\otimes\mathcal T)(|\Phi^+\rangle\langle\Phi^+|_{RQ})`$, with $`|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2`$. It is $`J_{\mathrm W}(\mathcal T)/2`$ after putting the tensor factors in the displayed $`R,B`$ order. |
+| The normalized channel Choi state | $`\tau_{RB}=(I_R\otimes\mathcal T)(\lvert\Phi^+\rangle\langle\Phi^+\rvert_{RQ})`$, with $`\lvert\Phi^+\rangle=(\lvert00\rangle+\lvert11\rangle)/\sqrt2`$. It is $`J_{\mathrm W}(\mathcal T)/2`$ after putting the tensor factors in the displayed $`R,B`$ order. |
 | Partial transposition on one tensor factor | $`\rho^{T_A}`$, taken in the fixed computational basis of the sender qubit. |
-| Trace norm | $`\|X\|_1=\operatorname{Tr}\sqrt{X^\dagger X}`$. The project uses it in the negativity $`\nu(\rho)=(\|\rho^{T_A}\|_1-1)/2`$. |
+| Trace norm | $`\lVert X\rVert_1=\operatorname{Tr}\sqrt{X^\dagger X}`$. The project uses it in the negativity $`\nu(\rho)=(\lVert\rho^{T_A}\rVert_1-1)/2`$. |
 | Permutations of tensor factors | The project uses $`N`$ for the number of physical spins and $`n=N/2`$ for half that number. Neither is a local Hilbert-space dimension, which is two. |
 
 ### Fidelity is used in two different senses
