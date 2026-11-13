@@ -29,7 +29,7 @@ A few conventions must be translated before using textbook formulas.
 | Choi operator $`J(\Phi)`$ in §2.2 | Denote it here by $`J_{\mathrm W}(\Phi)`$ to distinguish it from collective spin $`\mathbf J`$. The book's channel Choi operator has trace equal to the input dimension. |
 | The normalized channel Choi state | $`\tau_{RB}=(I_R\otimes\mathcal T)(\lvert\Phi^+\rangle\langle\Phi^+\rvert_{RQ})`$, with $`\lvert\Phi^+\rangle=(\lvert00\rangle+\lvert11\rangle)/\sqrt2`$. It is $`J_{\mathrm W}(\mathcal T)/2`$ after putting the tensor factors in the displayed $`R,B`$ order. |
 | Partial transposition on one tensor factor | $`\rho^{T_A}`$, taken in the fixed computational basis of the sender qubit. |
-| Trace norm | $`\lVert X\rVert_1=\operatorname{Tr}\sqrt{X^\dagger X}`$. The project uses it in the negativity $`\nu(\rho)=(\lVert\rho^{T_A}\rVert_1-1)/2`$. |
+| Trace norm | $`\lVert X\rVert_1=\mathrm{Tr}\sqrt{X^\dagger X}`$. The project uses it in the negativity $`\nu(\rho)=(\lVert\rho^{T_A}\rVert_1-1)/2`$. |
 | Permutations of tensor factors | The project uses $`N`$ for the number of physical spins and $`n=N/2`$ for half that number. Neither is a local Hilbert-space dimension, which is two. |
 
 ### Fidelity is used in two different senses
@@ -38,7 +38,7 @@ Watrous's Definition 3.11 uses the unsquared fidelity
 
 ```math
 F_{\mathrm W}(\rho,\sigma)
-=\left\|\sqrt{\rho}\sqrt{\sigma}\right\|_1.
+=\left\lVert\sqrt{\rho}\sqrt{\sigma}\right\rVert_1.
 ```
 
 For a pure target, its square is the overlap:
@@ -110,7 +110,7 @@ Writing $`P_1=I_4-|s\rangle\langle s|`$, the supplied resource is exactly
 =
 \frac23|s\rangle\langle s|
 +\frac13\frac{I_4}{4}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The factor $`1/12`$ is the weight per triplet basis state; the total triplet probability is $`1/4`$. These are eigenweights of a mixed state, not a classical success flag available to the parties.
@@ -132,7 +132,7 @@ For (1), every corrected outcome has the same conditional channel:
 =
 \frac23|\psi\rangle\langle\psi|
 +\frac13\frac{I_2}{2}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 The conditional overlap is therefore
@@ -149,7 +149,7 @@ All four outcomes are counted, giving
 F_{\mathrm{all}}
 =\sum_{m=1}^{4}\frac14\,F_m
 =\frac56.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 There is no unsuccessful projection branch in this smallest example. The receiver's rest-spin block has $`j=1/2`$, so the [middle-level projection](../science/teleportation-bounds.md#middle-level-projection) retains its entire two-dimensional space and has $`q=1`$.

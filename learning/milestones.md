@@ -64,7 +64,7 @@ The milestones are understanding targets, not thirty expanded tutorial chapters 
 ### M07: Background/preliminaries · Presence and amount of entanglement
 
 - **Central question:** What does a negative partial transpose establish, and what additional information does negativity retain?
-- **Understanding target:** Distinguish the PPT/NPT sign test from the trace-norm quantity $`\nu=(\|\rho^{T_A}\|_1-1)/2`$, and understand why an entanglement monotone can constrain a complete channel.
+- **Understanding target:** Distinguish the PPT/NPT sign test from the trace-norm quantity $`\nu=(\lVert\rho^{T_A}\rVert_1-1)/2`$, and understand why an entanglement monotone can constrain a complete channel.
 - **Dependencies and story role:** M02, M05–M06. It introduces the quantitative bridge between a supplied state and the communication score.
 - **Conceptual connection:** An arbitrarily small negative contribution can certify entanglement without guaranteeing an advantage bounded away from zero.
 - **Source pointers:** Watrous §6.2.3, [partial transposition][W6], and §1.1.3, [operator norms][W1]; [project negativity and score bound](../science/teleportation-bounds.md#a-universal-upper-bound-from-the-source-cut).

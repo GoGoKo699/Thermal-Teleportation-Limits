@@ -28,7 +28,7 @@ The source copy is supplied. The theorem concerns its use, rather than the time,
 
 ## 2. A uniform upper bound for every receiver strategy
 
-Write $`\nu_N(b)=(\|\rho_N(b)^{T_A}\|_1-1)/2`$ for the source negativity across the sender versus receiver cut. The [teleportation bound](teleportation-bounds.md) gives
+Write $`\nu_N(b)=(\lVert\rho_N(b)^{T_A}\rVert_1-1)/2`$ for the source negativity across the sender versus receiver cut. The [teleportation bound](teleportation-bounds.md) gives
 
 ```math
 F_N^{\mathrm{glob}}(b)
@@ -58,7 +58,7 @@ Consequently every contributing block has $`1/x\lt b/\ln3`$. Averaging the norma
 F_N^{\mathrm{glob}}(b)
 \le
 \frac23+\frac{2b}{3\ln3}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The spin-$`j`$ partial-transpose criterion is inherited from [Schliemann](../references/related-work.md#spin-sectors-and-thermal-entanglement). Its use here turns the thermal source's entanglement into a bound on the stated output task.
@@ -70,7 +70,7 @@ b\ge\frac{3\delta\ln3}{2},
 \qquad
 T\le
 \frac{2g}{3\delta\ln3\,Nk_{\mathrm B}}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Thus the raw parameter cannot vanish when the desired fidelity excess stays fixed. The sharper finite bounds and ordered essential rate in [rare sectors](rare-sectors.md) explain how strongly usefulness is suppressed when it does vanish.
@@ -109,7 +109,7 @@ After averaging all helper outcomes and applying their target corrections, the e
 \omega_N(b)=
 R_N(b)|s\rangle\langle s|
 +\bigl(1-R_N(b)\bigr)\frac{I_4}{4},
-\tag{3}
+\qquad\text{(3)}
 ```
 
 where $`|s\rangle`$ is the two-qubit singlet and
@@ -123,7 +123,7 @@ d_N(J)(-1)^J e^{-bJ(J+1)}
 \displaystyle\sum_{J=0}^{n}
 d_N(J)(2J+1)e^{-bJ(J+1)}
 }.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 To obtain (4), a collective rotation by $`\pi`$ has spin-$`J`$ character $`(-1)^J`$. Hence its thermal expectation is the numerator divided by $`Z_N`$, after removing the known $`(-1)^{N/2}`$ phase. Multiplying the helper Bell parities transfers this expectation to each corrected target correlation:
@@ -147,7 +147,7 @@ F_N^{\mathrm{pair}}(b)
 \max\left\{
 \frac23,\frac{1+R_N(b)}2
 \right\}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 This is an all-outcome protocol. It uses $`(N-2)/2`$ joint helper measurements and reliable classical parity communication. The pair interaction size is two, while the total number of joint helper measurements is extensive.
@@ -162,7 +162,7 @@ Let $`D_N=d_N(0)`$. The exact multiplicity ratio obeys
 (2J+1)\frac{n+1}{n+J+1}
 \frac{(n!)^2}{(n-J)!(n+J)!}
 \le 2J+1.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 For $`b\ge2`$, use $`q=e^{-4}\lt 1/50`$ and
@@ -192,7 +192,7 @@ R_N(b)\ge\frac{55174}{70025},
 F_N^{\mathrm{pair}}(b)
 \ge\frac{125199}{140050}>0.8939
 \qquad (b\ge2).
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The guaranteed excess over $`2/3`$ is $`95497/420150>0.2272`$. These rational bounds are finite guarantees. For example, $`e^4>50`$ follows already from its positive Taylor sum through degree seven.
@@ -208,7 +208,7 @@ q_\delta=
 \frac{1-3\delta}{72(1+3\delta)},
 \qquad
 b_\delta=\frac12\ln\frac1{q_\delta}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 For $`b\ge b_\delta`$, put $`q=e^{-2b}\le q_\delta\lt 1/2`$. Equation (6) gives an excited-sector weight relative to the singlet sector of at most
@@ -232,7 +232,7 @@ R_N\ge p_0-\frac{1-p_0}{3}
 \ge\frac13+2\delta,
 \qquad
 F_N^{\mathrm{pair}}\ge\frac23+\delta.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Combining necessity (2) and sufficiency (8)–(9) proves the claimed cooling order:
@@ -258,7 +258,7 @@ R_N(b)\longrightarrow R_\infty(b)
 (2J+1)^2e^{-bJ(J+1)}
 }
 \qquad (b>0\ \text{fixed}).
-\tag{10}
+\qquad\text{(10)}
 ```
 
 For orientation, $`R_\infty(2)\approx0.81123466`$, giving this decoder a fidelity of approximately $`0.90561733`$. These decimals are numerical evaluations of the convergent series; (7) supplies the finite certified guarantee.
@@ -279,7 +279,7 @@ For the stated Kac normalization this is
 
 ```math
 T\lt \frac{g}{k_{\mathrm B}\ln(N+1)}.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 At equality the cut is PPT. In this qubit–spin family the PPT blocks are also separable, as established by the product-state twirls used in the spin-sector analysis.

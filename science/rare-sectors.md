@@ -12,7 +12,7 @@ Use the [source and multiplicities](thermal-spectrum.md) with $`N=2n`$ and $`b=g
 a_x=e^{-b x(x-2)/4},
 \qquad c_x=e^{-b x(x+2)/4},
 \qquad h_x(b)=[a_x-(x+1)c_x]_+.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Let $`F_N^{\mathrm{glob}}(b)`$ be the optimal one-use average fidelity for an unknown Haar-uniform qubit. The sender owns one physical source spin and the late input. The receiver jointly controls all other $`N-1`$ source spins and can decode its output onto the designated physical output qubit. Local product ancillas, classical communication and the shared frame are allowed; every outcome is counted. No source preparation or laboratory-time advantage is asserted. The [model](model.md) fixes the same task throughout.
@@ -21,14 +21,14 @@ Define the nonnegative excess
 
 ```math
 \Delta_N(b)=F_N^{\mathrm{glob}}(b)-\frac23.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 It is nonnegative because a protocol can ignore the source and use optimal classical qubit transmission. The proved [finite operational sandwich](teleportation-bounds.md#finite-operational-sandwich) is
 
 ```math
 \mathcal D_N(b)\le\Delta_N(b)\le\frac23\nu_N(b),
-\tag{3}
+\qquad\text{(3)}
 ```
 
 where the explicit decoder achieves
@@ -37,7 +37,7 @@ where the explicit decoder achieves
 \mathcal D_N(b)=\frac{2}{3Z_N(b)}
 \sum_{\substack{2\le x\le N\\x\ \mathrm{even}}}
 \frac{d_{N-1}((x-1)/2)}{x}\,h_x(b).
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The upper bound remains valid when the source is divided among more laboratories. The matching decoder and the rate below use the receiver's joint control of the other $`N-1`$ spins. Joint control of helpers alone while both endpoints remain separate is a different model; no matching rare-excess rate for that model is claimed.
@@ -56,7 +56,7 @@ Write $`L=\ln(1/b)`$. For every even finite $`N`$ and $`0\lt b\le1/4`$,
 \frac{L+4}{2b}\exp\!\left[-\frac{L^2}{8b}\right]
 \right\}.
 }
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Consequently, $`\Delta_N(b)`$ is bounded by two thirds of the same expression. The coefficient $`1/8`$ here is a conservative finite bound; the sharp limiting coefficient will be $`1/4`$.
@@ -68,14 +68,14 @@ Consequently, $`\Delta_N(b)`$ is bounded by two thirds of the same expression. T
 \sum_{\substack{2\le x\le N\\x\ \mathrm{even}}}
 (x-1)e^{-b x(x-2)/4}
 \mathbf1\{bx>\ln(x+1)\}.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 A contributing $`x`$ satisfies $`x>\ln3/b>1/b`$, and therefore
 
 ```math
 bx>\ln(x+1)>\ln(1/b)=L.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Thus $`x>L/b`$. It also has $`x\ge4`$, so $`x(x-2)\ge x^2/2`$. Dropping the finite upper cutoff, including every integer instead of only even integers, and replacing $`x-1`$ by $`x`$ yield
@@ -84,7 +84,7 @@ Thus $`x>L/b`$. It also has $`x\ge4`$, so $`x(x-2)\ge x^2/2`$. Dropping the fini
 \nu_N(b)\le\frac12
 \sum_{\substack{x\in\mathbb Z\\x\ge L/b}}
 x e^{-b x^2/8}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 The function $`f(x)=x e^{-b x^2/8}`$ decreases for $`x\ge2/\sqrt b`$. For $`b\le1/4`$, $`L\ge2\sqrt b`$, so the sum begins in its decreasing region. The first-term-plus-integral estimate gives
@@ -93,7 +93,7 @@ The function $`f(x)=x e^{-b x^2/8}`$ decreases for $`x\ge2/\sqrt b`$. For $`b\le
 \sum_{\substack{x\in\mathbb Z\\x\ge L/b}}f(x)
 \le f(L/b)+\int_{L/b}^{\infty}f(t)\,dt
 =\frac{L+4}{b}e^{-L^2/(8b)}.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Combining (8)–(9) with the general $`\nu_N\le1/2`$ proves (5). The bound also applies when the finite source is exactly PPT, in which case its negativity and teleportation excess are zero.
@@ -104,14 +104,14 @@ For each fixed $`b>0`$, define
 
 ```math
 S(b)=\sum_{J=0}^{\infty}(2J+1)^2e^{-bJ(J+1)},
-\tag{10}
+\qquad\text{(10)}
 ```
 
 ```math
 A(b)=\frac12\sum_{\substack{x\ge2\\x\ \mathrm{even}}}
 (x-1)e^{-b x(x-2)/4}
 \left[1-(x+1)e^{-bx}\right]_+.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 Both series converge. The exact multiplicity ratios and their uniform bounds give, by dominated convergence,
@@ -121,7 +121,7 @@ Both series converge. The exact multiplicity ratios and their uniform bounds giv
 \qquad
 \nu_N(b)\longrightarrow\nu_\infty(b):=\frac{A(b)}{S(b)}
 \quad(N\to\infty\text{ through even }N).
-\tag{12}
+\qquad\text{(12)}
 ```
 
 For the denominator, the summable dominating sequence is $`(2J+1)^2e^{-bJ(J+1)}`$. For the negativity numerator divided by $`D_N`$, use $`(x-1)e^{-b x(x-2)/4}/2`$. Terms outside a finite source's spin range are extended by zero before taking the limit.
@@ -132,7 +132,7 @@ The denominator has only polynomial growth as $`b\downarrow0`$:
 
 ```math
 S(b)\sim\sqrt\pi\,b^{-3/2}.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Indeed, put $`u_J=\sqrt b(J+1/2)`$ and use $`J(J+1)=(J+1/2)^2-1/4`$. Then $`b^{3/2}S(b)`$ is a Gaussian Riemann sum converging to $`4\int_0^\infty u^2e^{-u^2}\,du=\sqrt\pi`$. In particular, $`\ln S(b)=O(\ln(1/b))`$.
@@ -147,7 +147,7 @@ The exact source limit obeys
 \frac{b}{[\ln(1/b)]^2}\ln\nu_\infty(b)
 =-\frac14.
 }
-\tag{14}
+\qquad\text{(14)}
 ```
 
 The exponent comes from the first spin sectors that can be NPT. They occur at $`x`$ of order $`\ln(1/b)/b`$, far above the thermally typical order $`b^{-1/2}`$. Their Boltzmann cost is therefore of order $`\exp[-\ln^2(1/b)/(4b)]`$ on the logarithmic scale specified in (14).
@@ -164,7 +164,7 @@ Drop the bracket in (11), replace even $`x`$ by all integers, and apply the same
 A(b)\le
 \left(\frac{L}{2b}+\frac1{(1-\varepsilon)b}\right)
 \exp\!\left[-\frac{(1-\varepsilon)L^2}{4b}\right]
-\tag{15}
+\qquad\text{(15)}
 ```
 
 for all sufficiently small $`b`$. The logarithm of the prefactor is $`O(L+\ln L)`$, negligible compared with $`L^2/b`$. Since $`S(b)\ge1`$,
@@ -182,7 +182,7 @@ Let $`\varepsilon\downarrow0`$.
 x_b=\frac{aL}{b}+O(1),
 \qquad
 (x_b+1)e^{-bx_b}=O(Lb^{a-1})\longrightarrow0.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 For all sufficiently small $`b`$, the bracket in that one term of (11) is at least $`1/2`$. Using (13),
@@ -191,7 +191,7 @@ For all sufficiently small $`b`$, the bracket in that one term of (11) is at lea
 \ln\nu_\infty(b)
 \ge-\frac{b x_b(x_b-2)}4-C_a(L+\ln L)
 =-\frac{a^2L^2}{4b}+o(L^2/b).
-\tag{17}
+\qquad\text{(17)}
 ```
 
 Thus the lower limit is at least $`-a^2/4`$. Let $`a\downarrow1`$. This proves (14), without requiring a sharper expansion of the root of $`bx=\ln(x+1)`$.
@@ -206,14 +206,14 @@ d(b):=\frac1{3S(b)}
 \sum_{\substack{x\ge2\\x\ \mathrm{even}}}
 e^{-b x(x-2)/4}
 \left[1-(x+1)e^{-bx}\right]_+>0.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 Dominated convergence again applies, because $`d_{N-1}((x-1)/2)/(xD_N)\le1/2`$. Retaining the same one term $`x_b`$ used in (16) gives
 
 ```math
 \liminf_{b\downarrow0}\frac b{L^2}\ln d(b)\ge-\frac14.
-\tag{19}
+\qquad\text{(19)}
 ```
 
 Its missing factor $`x_b-1`$ relative to (11) changes the logarithm only by $`O(L+\ln L)`$. The upper bound $`d(b)\le2\nu_\infty(b)/3`$ and (14) therefore show that its logarithmic rate is also exactly $`-1/4`$.
@@ -224,14 +224,14 @@ Define the two ordered envelopes
 \Delta_-(b)=\liminf_{\substack{N\to\infty\\N\ \mathrm{even}}}\Delta_N(b),
 \qquad
 \Delta_+(b)=\limsup_{\substack{N\to\infty\\N\ \mathrm{even}}}\Delta_N(b).
-\tag{20}
+\qquad\text{(20)}
 ```
 
 The finite operational sandwich implies
 
 ```math
 0\lt d(b)\le\Delta_-(b)\le\Delta_+(b)\le\frac23\nu_\infty(b).
-\tag{21}
+\qquad\text{(21)}
 ```
 
 Both endpoints in this sandwich have the same logarithmic rate. Hence
@@ -242,7 +242,7 @@ Both endpoints in this sandwich have the same logarithmic rate. Hence
 =\lim_{b\downarrow0}\frac b{[\ln(1/b)]^2}\ln\Delta_+(b)
 =-\frac14.
 }
-\tag{22}
+\qquad\text{(22)}
 ```
 
 Equation (22) is the claimed ordered operational law. It does not assert $`\Delta_-(b)=\Delta_+(b)`$ at a fixed $`b`$, nor an exact optimal fidelity or prefactor.
@@ -253,7 +253,7 @@ There is also a sufficient joint regime, stated without interchanging the limits
 
 ```math
 \frac{N b_N^2}{[\ln(1/b_N)]^2}\longrightarrow\infty.
-\tag{23}
+\qquad\text{(23)}
 ```
 
 Then both the finite source negativity and the finite optimal global excess have the sharp rate:
@@ -266,7 +266,7 @@ Then both the finite source negativity and the finite optimal global excess have
 \frac{b_N}{[\ln(1/b_N)]^2}\ln\Delta_N(b_N)
 =-\frac14.
 }
-\tag{24}
+\qquad\text{(24)}
 ```
 
 **Proof.** The finite upper bound leading to (15) is uniform in $`N`$, since it used only $`Z_N\ge D_N`$ and the multiplicity upper bound. It gives the same upper logarithmic rate for $`\nu_N`$, and then for $`\Delta_N`$.

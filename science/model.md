@@ -20,7 +20,7 @@ At temperature $`T>0`$, the source supplies one copy of
 ```math
 \rho_N(b)=\frac{e^{-b\mathbf J^2}}{Z_N(b)},
 \qquad
-Z_N(b)=\operatorname{Tr}e^{-b\mathbf J^2},
+Z_N(b)=\mathrm{Tr}e^{-b\mathbf J^2},
 \qquad
 b=\frac{g}{Nk_{\mathrm B}T}.
 ```
