@@ -21,7 +21,7 @@ b=\frac{g}{Nk_{\mathrm B}T},
 \qquad
 \rho_N(b)=\frac{e^{-b\mathbf J^2}}{Z_N(b)},
 \qquad
-Z_N(b)=\operatorname{Tr}e^{-b\mathbf J^2}.
+Z_N(b)=\mathrm{Tr}e^{-b\mathbf J^2}.
 ```
 
 Here $`b`$ is dimensionless. All logarithms on this page and in the asymptotic proofs are natural logarithms. The Gibbs state is supplied; preparing it, cooling it, and measuring or calibrating its Hamiltonian are separate physical costs. The [model](model.md) specifies the allowed laboratories and the one-use teleportation task.
@@ -30,7 +30,7 @@ For $`M`$ spins, let $`d_M(j)`$ be the multiplicity of the spin-$`j`$ representa
 
 ```math
 d_M(j)=\binom{M}{M/2-j}-\binom{M}{M/2-j-1}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Allowed spins differ by one and have the same integer or half-integer parity as $`M/2`$. A binomial coefficient with an inadmissible integer lower argument is zero. The projector $`P_j^{(M)}`$ includes all multiplicities and therefore has rank $`(2j+1)d_M(j)`$. Consequently,
@@ -40,14 +40,14 @@ Allowed spins differ by one and have the same integer or half-integer parity as 
 \sum_{J=0}^{n}e^{-bJ(J+1)}P_J^{(N)},
 \qquad
 Z_N(b)=\sum_{J=0}^{n}(2J+1)d_N(J)e^{-bJ(J+1)}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Fix one physical spin $`A`$. Permutation invariance makes the choice of that site irrelevant. The negativity across $`A:A^c`$ is
 
 ```math
-\nu_N(b)=\frac{\|\rho_N(b)^{T_A}\|_1-1}{2}.
-\tag{3}
+\nu_N(b)=\frac{\lVert\rho_N(b)^{T_A}\rVert_1-1}{2}.
+\qquad\text{(3)}
 ```
 
 In the global benchmark, $`A`$ is the sender's one source spin and all $`N-1`$ other source spins are in the receiver's joint laboratory. Bounds across this cut also constrain more separated models, because grouping sites into one laboratory only enlarges the allowed operations. Matching teleportation constructions must retain the laboratory model in which they are proved.
@@ -62,7 +62,7 @@ x=2j+1=2\ell,
 a_x=e^{-b x(x-2)/4},
 \qquad
 c_x=e^{-b x(x+2)/4}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The two possible total spins are $`j-\tfrac12=(x-2)/2`$ and $`j+\tfrac12=x/2`$. Thus the exponents in (4) are their actual energies $`J(J+1)`$. In particular, the first exponent is $`x(x-2)/4`$.
@@ -72,15 +72,15 @@ For every copy of the rest's spin-$`j`$ multiplicity space, the unnormalized Gib
 ```math
 X_j=a_xP_-+c_xP_+,
 \qquad
-t_x=\operatorname{Tr}X_j=(x-1)a_x+(x+1)c_x.
-\tag{5}
+t_x=\mathrm{Tr}X_j=(x-1)a_x+(x+1)c_x.
+\qquad\text{(5)}
 ```
 
 Here $`P_-`$ and $`P_+`$ are the projectors onto total spins $`j-\tfrac12`$ and $`j+\tfrac12`$, of ranks $`x-1`$ and $`x+1`$. The corresponding normalized block is $`\tau_j=X_j/t_x`$, and its probability in the source is
 
 ```math
 p_j=\frac{d_{N-1}(j)t_x}{Z_N(b)}.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 These probabilities sum to one by the Clebsch–Gordan decomposition. The multiplicity factors are not additional entangled systems across the cut.
@@ -91,7 +91,7 @@ To compute the partial transpose explicitly, write $`K=\mathbf J_{A^c}\cdot\bold
 P_- =\frac{jI-K}{x},
 \qquad
 P_+ =\frac{(j+1)I+K}{x}.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Transposition of the qubit, followed by conjugation by its spin-flip unitary, sends every Pauli matrix to its negative. This is a unitary conjugate of the partial transpose and preserves its spectrum. It sends $`K`$ to $`-K`$. Substitution in (5) therefore gives the two eigenvalues of the unnormalized partial transpose:
@@ -104,7 +104,7 @@ Transposition of the qubit, followed by conjugation by its spin-flip unitary, se
 ```math
 \lambda_-(x)=\frac{-a_x+(x+1)c_x}{x}
 \quad\text{with multiplicity }x-1.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Only the second eigenvalue can be negative. It follows that
@@ -113,7 +113,7 @@ Only the second eigenvalue can be negative. It follows that
 \nu_j:=\nu(\tau_j)
 =\frac{x-1}{x\,t_x}\,[a_x-(x+1)c_x]_+,
 \qquad [u]_+=\max\{u,0\},
-\tag{9}
+\qquad\text{(9)}
 ```
 
 and the exact finite source negativity is
@@ -128,7 +128,7 @@ d_{N-1}\!\left(\frac{x-1}{2}\right)
 e^{-b x(x-2)/4}-(x+1)e^{-b x(x+2)/4}
 \right]_+.
 }
-\tag{10}
+\qquad\text{(10)}
 ```
 
 The orthogonal rest-spin blocks explain why their negativities add with the probabilities (6). This is an equality for the supplied finite state, with no thermodynamic limit or low-temperature approximation.
@@ -139,10 +139,10 @@ Since $`a_x/c_x=e^{bx}`$, (8) is negative exactly when
 
 ```math
 bx>\ln(x+1).
-\tag{11}
+\qquad\text{(11)}
 ```
 
-The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign of $`x/(x+1)-\ln(x+1)<0`$. The largest allowed value $`x=N`$ has nonzero rest multiplicity. Therefore
+The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign of $`x/(x+1)-\ln(x+1)\lt 0`$. The largest allowed value $`x=N`$ has nonzero rest multiplicity. Therefore
 
 ```math
 \boxed{
@@ -150,9 +150,9 @@ The function $`\ln(x+1)/x`$ decreases for $`x>0`$: its derivative has the sign o
 \quad\Longleftrightarrow\quad
 b>\frac{\ln(N+1)}{N}
 \quad\Longleftrightarrow\quad
-T<\frac{g}{k_{\mathrm B}\ln(N+1)}.
+T\lt \frac{g}{k_{\mathrm B}\ln(N+1)}.
 }
-\tag{12}
+\qquad\text{(12)}
 ```
 
 At equality every block is positive under partial transpose, with a zero eigenvalue in the extremal block. The same PPT conclusion holds above the stated temperature.
@@ -167,7 +167,7 @@ Equation (9) implies
 
 ```math
 0\le\nu_j\le\frac1x.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Indeed, after dropping the negative term in its numerator and using $`t_x\ge(x-1)a_x`$, the right side follows immediately. Equality is the zero-upper-sector limit $`c_x/a_x\to0`$ at fixed $`j`$.
@@ -178,7 +178,7 @@ Every contributing block obeys $`bx>\ln(x+1)\ge\ln3`$. Its negativity is therefo
 \boxed{
 \nu_N(b)\le\min\!\left\{\frac12,\frac b{\ln3}\right\}.
 }
-\tag{14}
+\qquad\text{(14)}
 ```
 
 This bound holds for every finite even $`N`$ and every $`b>0`$. It does not assume a typical-spin approximation. Together with negativity monotonicity, it forces the [operational cooling scale](teleportation-bounds.md) for a fixed teleportation advantage. The [rare-sector bound](rare-sectors.md#an-explicit-uniform-finite-bound) gives a much smaller estimate when $`b`$ tends to zero.
@@ -193,7 +193,7 @@ Let $`D_N=d_N(0)=\binom{2n}{n}/(n+1)`$. Direct evaluation of (1) gives
 \prod_{r=0}^{J-1}\frac{n-r}{n+r+1}
 \le2J+1,
 \qquad 0\le J\le n,
-\tag{15}
+\qquad\text{(15)}
 ```
 
 and
@@ -204,7 +204,7 @@ and
 \prod_{r=1}^{\ell-1}\frac{n-r}{n+r}
 \le\ell,
 \qquad1\le\ell\le n.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 Empty products equal one. In particular, $`d_{N-1}(\tfrac12)=D_N`$. Every factor after $`2J+1`$ or $`\ell`$ is at most one. For any fixed $`J`$ or $`\ell`$, these factors tend to one as $`N\to\infty`$. Hence
@@ -213,7 +213,7 @@ Empty products equal one. In particular, $`d_{N-1}(\tfrac12)=D_N`$. Every factor
 \frac{d_N(J)}{D_N}\longrightarrow2J+1,
 \qquad
 \frac{d_{N-1}(\ell-\tfrac12)}{D_N}\longrightarrow\ell.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 The convergence of (16), divided by $`\ell`$, remains uniform along a sequence with $`\ell^2/N\to0`$. To see this directly, take logarithms of its product. For $`\ell/n\le1/2`$, the elementary bound $`|\ln(1-u)-\ln(1+u)|\le C u`$ for $`0\le u\le1/2`$ gives a total logarithmic error $`O(\ell^2/n)`$, including the prefactor. It tends to zero. This explicit condition is used in the simultaneous limit, rather than assuming fixed-spin asymptotics at an arbitrarily growing spin.

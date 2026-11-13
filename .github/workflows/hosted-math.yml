@@ -1,0 +1,84 @@
+name: Hosted mathematics
+on:
+  pull_request:
+    paths:
+      - '**.md'
+      - 'verification/hosted_math/**'
+      - '.github/workflows/hosted-math.yml'
+permissions:
+  contents: read
+concurrency:
+  group: hosted-math-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  capture:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      CAPTURE_REVISION: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - name: Check out the exact proposed source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.CAPTURE_REVISION }}
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Install the temporary capture runtime
+        run: |
+          npm install --prefix "$RUNNER_TEMP/math-runtime" playwright@1.56.1 mathjax-full@3.2.1 --ignore-scripts --no-audit --no-fund
+          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Probe representative hosted mathematics
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
+          node verification/hosted_math/probe_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" \
+            --revision "$CAPTURE_REVISION" --page README.md \
+            --output "$RUNNER_TEMP/hosted-math/probe"
+      - name: Compare every hosted mathematical expression
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
+          node verification/hosted_math/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" \
+            --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-math/final"
+      - name: Capture the learning introduction without scroll overlays
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
+          node <<'JS'
+          const fs = require('node:fs');
+          const crypto = require('node:crypto');
+          const {chromium} = require('playwright');
+          (async () => {
+            const output = process.env.RUNNER_TEMP + '/hosted-math/intro';
+            fs.mkdirSync(output, {recursive:true});
+            const url = 'https://github.com/' + process.env.GITHUB_REPOSITORY + '/blob/' + process.env.CAPTURE_REVISION + '/learning/milestones.md';
+            const browser = await chromium.launch({headless:true});
+            const observations = [];
+            for (const width of [1440,760]) {
+              const context = await browser.newContext({viewport:{width,height:1600}});
+              const page = await context.newPage();
+              await page.goto(url, {waitUntil:'domcontentloaded'});
+              await page.locator('.markdown-body').waitFor({state:'visible'});
+              await page.evaluate(() => window.scrollTo(0,1));
+              await page.evaluate(() => window.scrollTo(0,0));
+              await page.waitForTimeout(1500);
+              const filename = 'milestones-intro-' + width + '.png';
+              await page.screenshot({path:output + '/' + filename,fullPage:false});
+              observations.push({url,width,revision:process.env.CAPTURE_REVISION,observed_at:new Date().toISOString(),screenshot:filename,sha256:crypto.createHash('sha256').update(fs.readFileSync(output + '/' + filename)).digest('hex')});
+              await context.close();
+            }
+            await browser.close();
+            fs.writeFileSync(output + '/observations.json',JSON.stringify(observations,null,2) + '\n');
+          })().catch(error => {console.error(error);process.exitCode=1;});
+          JS
+      - name: Retain captures and comparison reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: hosted-math-${{ env.CAPTURE_REVISION }}
+          path: ${{ runner.temp }}/hosted-math
+          if-no-files-found: error
+          retention-days: 14

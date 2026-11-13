@@ -9,8 +9,8 @@ The party model throughout this page is the [global receiver benchmark](model.md
 Let
 
 ```math
-\nu_N(b)=\operatorname{Neg}_{A:A^c}(\rho_N(b))
-=\frac{\|\rho_N(b)^{T_A}\|_1-1}{2}.
+\nu_N(b)=\mathrm{Neg}_{A:A^c}(\rho_N(b))
+=\frac{\lVert\rho_N(b)^{T_A}\rVert_1-1}{2}.
 ```
 
 For any deterministic protocol in the benchmark,
@@ -24,10 +24,10 @@ To prove this for the complete protocol, give the sender half of a Bell pair $`R
 For any two-qubit state and fixed Bell projector $`\Phi`$,
 
 ```math
-\operatorname{Tr}(\Phi\tau)
-=\operatorname{Tr}(\Phi^{T_B}\tau^{T_B})
-\le \frac12\|\tau^{T_B}\|_1
-=\frac12+\operatorname{Neg}(\tau).
+\mathrm{Tr}(\Phi\tau)
+=\mathrm{Tr}(\Phi^{T_B}\tau^{T_B})
+\le \frac12\lVert\tau^{T_B}\rVert_1
+=\frac12+\mathrm{Neg}(\tau).
 ```
 
 The operator norm of $`\Phi^{T_B}`$ is $`1/2`$. The Haar-average channel identity $`F=(2F_{\mathrm e}+1)/3`$ then gives the bound. This proof includes protocols that act on the unknown input during helper processing; it does not assume that a target Bell pair is first localized. Negativity monotonicity and this teleportation relation are established tools, credited in the [references](../references/related-work.md).
@@ -72,7 +72,7 @@ X_j=\alpha_j I+\beta_j\boldsymbol\sigma\cdot\mathbf J_j,
 The inherited invariant-spin partial-transpose spectrum, derived in the [thermal-spectrum account](thermal-spectrum.md), gives
 
 ```math
-\nu_j=\operatorname{Neg}(\widehat\rho_j)
+\nu_j=\mathrm{Neg}(\widehat\rho_j)
 =\frac{(x-1)[a_x-(x+1)c_x]_+}{x z_j}.
 ```
 

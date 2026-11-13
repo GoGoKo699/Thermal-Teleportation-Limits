@@ -16,7 +16,7 @@ with even $`N`$. An independent unknown qubit arrives at a fixed sender spin, an
 
 | Question | Supported answer |
 |---|---|
-| When is one physical spin entangled with the rest? | Exactly when $`T<g/[k_{\mathrm B}\ln(N+1)]`$. This specializes the known invariant-spin partial-transpose criterion. |
+| When is one physical spin entangled with the rest? | Exactly when $`T\lt g/[k_{\mathrm B}\ln(N+1)]`$. This specializes the known invariant-spin partial-transpose criterion. |
 | How cold must the source be for a fixed excess $`\delta\in(0,1/3)`$ above classical teleportation? | The largest usable temperature is $`\Theta_\delta(g/[k_{\mathrm B}N])`$. The converse permits a globally controlled receiver; disjoint helper-pair measurements attain the order. |
 | What if every helper remains a singleton laboratory? | At every temperature, $`F_N^{\mathrm{single}}\le2/3+1/[3(N-1)]`$. The zero-temperature maximally mixed singlet attains equality. |
 | How much does a fixed partition into $`k`$ helper pairs help at zero temperature? | $`F_{N,k}-2/3\le1/[3(N-2k-1)]`$. This is a converse, with attainment established at the singleton and fully paired endpoints. |
@@ -49,6 +49,12 @@ Start with the [task and allowed laboratories](science/model.md), then use the [
 | Attribution, primary versions and comparison scope | [Related work](references/related-work.md) and [source evidence](references/source-evidence.md) |
 
 [The LLM reading guide](llms.txt) maps scientific questions to their authoritative files.
+
+## Learn the project
+
+The educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [source bridge](learning/anchor-and-bridge.md) identifies the relevant sections, translates the fidelity and channel conventions, and supplies the collective-spin and thermal connections needed here.
+
+The [30-milestone map](learning/milestones.md) builds the task and its prerequisites before connecting the access bounds, cooling law and rare-sector mechanism. Use the [learning entrypoint](learning/README.md) to follow that route; the direct science links above remain the authoritative proof route.
 
 ## Reproduce the finite checks
 
